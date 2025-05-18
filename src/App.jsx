@@ -9,10 +9,8 @@ import { FooterCom } from './Components/FooterCom';
 
 import { Home } from './Page/Home'
 import { Works } from './Page/Works';
-import { Comparision } from './Page/Comparision';
-import { Skills } from './Page/Skills';
 import { About } from './Page/About';
-import { Contact } from './Page/Contact';
+import { Contacts } from './Page/Contacts';
 
 
 
@@ -21,17 +19,12 @@ function App() {
     <Router className="App">
 
       <NavCom />
-
       <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/works' element={<Works />} />
-      <Route path='/comparision' element={<Comparision />} />
-      <Route path='/skills' element={<Skills />} />
       <Route path='/about' element={<About />} />
-      <Route path='/contact' element={ <Contact/> } />
+      <Route path='/contact' element={ <Contacts /> } />
       </Routes>
-
-      
       <FooterCom />
 
     </Router>

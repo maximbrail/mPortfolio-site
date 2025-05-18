@@ -7,8 +7,8 @@ export const FooterCom = () => {
       <div className="footer-container">
         <div className="footer-section">
           <h2>Contact Me</h2>
-          <p>Email: pirog7000@gmail.com</p>
-          <p>Phone: +998 (93) 394-45-81</p>
+          <p>Email: max@outlook.com</p>
+          <p>Phone: +998 (90) 123-12-34</p>
         </div>
 
         <div className="footer-section right">
