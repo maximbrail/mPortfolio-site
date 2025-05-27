@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styleCom.css";
 import Prj1 from "../Assets/project1.png";
 import Prj2 from "../Assets/project2.png";
@@ -6,10 +6,40 @@ import Prj3 from "../Assets/project3.png";
 import Prj4 from "../Assets/project4.png";
 
 export const HeaderCom = () => {
+  const texts = [
+    "Hello! I'm Max, a 15-year-old front-end development student from Tashkent, Uzbekistan. I'm currently studying at School №145 and also attending programming courses at IT Park, where I'm learning modern web technologies and improving my coding skills.",
+    "I'm passionate about building beautiful, responsive, and user-friendly websites using HTML, CSS, and JavaScript. In my free time, I love experimenting with different layouts, exploring design ideas, and creating projects to practice what I’ve learned.",
+    "I’m always eager to learn something new and grow as a developer. In the future, I hope to become a professional front-end engineer and work on real-world projects that help people and make a difference.",
+    "Right now, I’m focusing on mastering JavaScript, learning how to work with APIs, and exploring frameworks like React."
+  ];
+
+  const [currentText, setCurrentText] = useState("");
+  const [textIndex, setTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [allShownTexts, setAllShownTexts] = useState([]);
+
+  useEffect(() => {
+    if (textIndex < texts.length) {
+      if (charIndex < texts[textIndex].length) {
+        const timeout = setTimeout(() => {
+          setCurrentText((prev) => prev + texts[textIndex][charIndex]);
+          setCharIndex((prev) => prev + 1);
+        }, 25); // Скорость печати
+        return () => clearTimeout(timeout);
+      } else {
+        // Абзац дописан — сохраняем его и переходим к следующему
+        setAllShownTexts((prev) => [...prev, texts[textIndex]]);
+        setCurrentText("");
+        setCharIndex(0);
+        setTextIndex((prev) => prev + 1);
+      }
+    }
+  }, [charIndex, textIndex]);
+
   return (
     <div className="header-obsh">
       <div className="header3">
-        <h1 className="header-title2">Terminal</h1>
+        <h1 className="header-title2">Notepad</h1>
         <div className="window-controls">
           <div className="window-btn">-</div>
           <div className="window-btn">+</div>
@@ -18,41 +48,15 @@ export const HeaderCom = () => {
       </div>
 
       <div className="header">
-        <header className="podtitles">
-        <h1 className="header-title header-title3">
-            Microsoft Windows [Version 10.0.26100.3915] 
-            <br/>
-        &copy; mCorporation 2025. All rights reserved. Probably.
-        </h1>
-        </header>
+        {allShownTexts.map((text, i) => (
+          <h1 key={i} className="header-title">{text}</h1>
+        ))}
 
-        <h1 className="header-title">
-          C:\Users\Max\Desktop{">"} cd PortfolioWeb
-        </h1>
-        <h1 className="header-title">
-          C:\Users\Max\Desktop\PortfolioWeb{">"} npm run dev
-          <br/>
-          <br/>
-          VITE v6.3.2  ready in 242 ms
-        ➜  Local:   http://localhost:5173/
-        </h1>
-        <h1 className="header-title">
-          <br/>
-          C:\Users\Max\Desktop\PortfolioWeb{">"} echo Hello! I'm Max, 15-yrs old
-          frond-end student
-          <br/>
-          <br/>
-          Hello! I'm Max, 15-yrs old frond-end student.
-        </h1>
-        <h1 className="header-title">
-          <br/>
-          C:\Users\Max\Desktop\PortfolioWeb{">"} echo I live in Tashkent, study
-          at school №145 and at the "IT Park" programming school.
-          <br/>
-          <br/>
-          I live in Tashkent, study
-          at school №145 and at the "IT Park" programming school.
-        </h1>
+        {textIndex < texts.length && (
+          <h1 className="header-title">
+            <span className="animated-text cursor-blink">{currentText}</span>
+          </h1>
+        )}
       </div>
 
       <div className="header header2">
