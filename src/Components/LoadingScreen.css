@@ -9,8 +9,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* расстояние между спиннером и текстом */
+  gap: 20px;
   z-index: 9999;
+  font-family: monospace, monospace;
+  color: #1ae0f4;
+  user-select: none;
 }
 
 .spinner {
@@ -20,17 +23,19 @@
   border-top-color: #1ae0f4;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+  box-sizing: border-box;
 }
 
 .loading-text {
-  color: #1ae0f4;
-  font-family: monospace, monospace;
   font-size: 1.2rem;
-  user-select: none;
+  color: #1ae0f4;
 }
 
 @keyframes spin {
-  to {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }

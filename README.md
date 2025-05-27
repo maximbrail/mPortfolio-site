@@ -1,5 +1,6 @@
-<img src="./src/Assets/logo.png" alt="Logo" width="30" />
-
+<p align="center">
+  <img src="./src/Assets/mPortfolioLogoGitHub.svg" alt="mPortfolio Logo" width="150" />
+</p>
 # mPortfolio
 
 ## Description
