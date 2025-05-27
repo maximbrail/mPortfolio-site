@@ -1,6 +1,4 @@
-![Logo](./src/Assets/logo.png/)
-
-<img src="logo.png" alt="Logo" width="30" />
+<img src="./src/Assets/logo.png" alt="Logo" width="30" />
 
 # mPortfolio
 
