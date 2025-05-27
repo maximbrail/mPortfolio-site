@@ -60,29 +60,30 @@ export const HeaderCom = () => {
       </div>
 
       <div className="header header2">
-        <h2 className="header-title">
-          Here are some of my sites. <br />
-          Yes, these are not my projects, but I did them
-        </h2>
-        <div className="cards">
-          <div className="card">
-            <img src={Prj1} alt="" className="card-img" />
-            <p className="card-title">Luxury Hotels Project</p>
-          </div>
-          <div className="card">
-            <img src={Prj2} alt="" className="card-img" />
-            <p className="card-title">Shibuya Project</p>
-          </div>
-          <div className="card">
-            <img src={Prj3} alt="" className="card-img" />
-            <p className="card-title">Cat Energy Project</p>
-          </div>
-          <div className="card">
-            <img src={Prj4} alt="" className="card-img" />
-            <p className="card-title">Polar Ice Cream Project</p>
-          </div>
-        </div>
-      </div>
+  <h2 className="header-title">
+    Here are some of my sites. <br />
+    Yes, these are not my projects, but I did them
+  </h2>
+  <div className="cards">
+    <a href="https://example.com/luxury-hotels" target="_blank" rel="noopener noreferrer" className="card">
+      <img src={Prj1} alt="" className="card-img" />
+      <p className="card-title">Luxury Hotels Project</p>
+    </a>
+    <a href="https://example.com/shibuya" target="_blank" rel="noopener noreferrer" className="card">
+      <img src={Prj2} alt="" className="card-img" />
+      <p className="card-title">Shibuya Project</p>
+    </a>
+    <a href="https://example.com/cat-energy" target="_blank" rel="noopener noreferrer" className="card">
+      <img src={Prj3} alt="" className="card-img" />
+      <p className="card-title">Cat Energy Project</p>
+    </a>
+    <a href="https://example.com/polar-icecream" target="_blank" rel="noopener noreferrer" className="card">
+      <img src={Prj4} alt="" className="card-img" />
+      <p className="card-title">Polar Ice Cream Project</p>
+    </a>
+  </div>
+</div>
+
     </div>
   );
 };
