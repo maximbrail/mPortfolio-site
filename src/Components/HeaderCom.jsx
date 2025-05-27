@@ -65,19 +65,19 @@ export const HeaderCom = () => {
     Yes, these are not my projects, but I did them
   </h2>
   <div className="cards">
-    <a href="https://example.com/luxury-hotels" target="_blank" rel="noopener noreferrer" className="card">
+    <a href="https://maximbrail.github.io/hotel-site/" target="_blank" rel="noopener noreferrer" className="card">
       <img src={Prj1} alt="" className="card-img" />
       <p className="card-title">Luxury Hotels Project</p>
     </a>
-    <a href="https://example.com/shibuya" target="_blank" rel="noopener noreferrer" className="card">
+    <a href="https://maximbrail.github.io/shibuya-site-not-full/" target="_blank" rel="noopener noreferrer" className="card">
       <img src={Prj2} alt="" className="card-img" />
       <p className="card-title">Shibuya Project</p>
     </a>
-    <a href="https://example.com/cat-energy" target="_blank" rel="noopener noreferrer" className="card">
+    <a href="https://maximbrail.github.io/cat-energy-full/" target="_blank" rel="noopener noreferrer" className="card">
       <img src={Prj3} alt="" className="card-img" />
       <p className="card-title">Cat Energy Project</p>
     </a>
-    <a href="https://example.com/polar-icecream" target="_blank" rel="noopener noreferrer" className="card">
+    <a href="https://maximbrail.github.io/final-ice-cream-updated/" target="_blank" rel="noopener noreferrer" className="card">
       <img src={Prj4} alt="" className="card-img" />
       <p className="card-title">Polar Ice Cream Project</p>
     </a>
