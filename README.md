@@ -1,7 +1,6 @@
 <p align="center">
   <img src="./src/Assets/mPortfolioLogoGitHub.svg" alt="mPortfolio Logo" width="150" />
 </p>
-# mPortfolio
 
 ## Description
 
