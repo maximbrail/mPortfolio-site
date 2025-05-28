@@ -24,10 +24,9 @@ export const HeaderCom = () => {
         const timeout = setTimeout(() => {
           setCurrentText((prev) => prev + texts[textIndex][charIndex]);
           setCharIndex((prev) => prev + 1);
-        }, 25); // Скорость печати
+        }, 25);
         return () => clearTimeout(timeout);
       } else {
-        // Абзац дописан — сохраняем его и переходим к следующему
         setAllShownTexts((prev) => [...prev, texts[textIndex]]);
         setCurrentText("");
         setCharIndex(0);
@@ -60,30 +59,29 @@ export const HeaderCom = () => {
       </div>
 
       <div className="header header2">
-  <h2 className="header-title">
-    Here are some of my sites. <br />
-    Yes, these are not my projects, but I did them
-  </h2>
-  <div className="cards">
-    <a href="https://maximbrail.github.io/hotel-site/" target="_blank" rel="noopener noreferrer" className="card">
-      <img src={Prj1} alt="" className="card-img" />
-      <p className="card-title">Luxury Hotels Project</p>
-    </a>
-    <a href="https://maximbrail.github.io/shibuya-site-not-full/" target="_blank" rel="noopener noreferrer" className="card">
-      <img src={Prj2} alt="" className="card-img" />
-      <p className="card-title">Shibuya Project</p>
-    </a>
-    <a href="https://maximbrail.github.io/cat-energy-full/" target="_blank" rel="noopener noreferrer" className="card">
-      <img src={Prj3} alt="" className="card-img" />
-      <p className="card-title">Cat Energy Project</p>
-    </a>
-    <a href="https://maximbrail.github.io/final-ice-cream-updated/" target="_blank" rel="noopener noreferrer" className="card">
-      <img src={Prj4} alt="" className="card-img" />
-      <p className="card-title">Polar Ice Cream Project</p>
-    </a>
-  </div>
-</div>
-
+        <h2 className="header-title">
+          Here are some of my sites. <br />
+          Yes, I am not the author of these sites, but I made them.
+        </h2>
+        <div className="cards">
+          <a href="https://maximbrail.github.io/hotel-site/" target="_blank" rel="noopener noreferrer" className="card">
+            <img src={Prj1} alt="" className="card-img" />
+            <p className="card-title">Luxury Hotels Project</p>
+          </a>
+          <a href="https://maximbrail.github.io/shibuya-site-not-full/" target="_blank" rel="noopener noreferrer" className="card">
+            <img src={Prj2} alt="" className="card-img" />
+            <p className="card-title">Shibuya Project</p>
+          </a>
+          <a href="https://maximbrail.github.io/cat-energy-full/" target="_blank" rel="noopener noreferrer" className="card">
+            <img src={Prj3} alt="" className="card-img" />
+            <p className="card-title">Cat Energy Project</p>
+          </a>
+          <a href="https://maximbrail.github.io/final-ice-cream-updated/" target="_blank" rel="noopener noreferrer" className="card">
+            <img src={Prj4} alt="" className="card-img" />
+            <p className="card-title">Polar Ice Cream Project</p>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

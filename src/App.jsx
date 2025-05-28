@@ -8,6 +8,8 @@ import { Home } from './Page/Home'
 import { Works } from './Page/Works';
 import { About } from './Page/About';
 import { Contacts } from './Page/Contacts';
+import NotFound404 from "./Page/NotFound404";
+import SecretPage from './Page/SecretPage';
 
 import LoadingScreen from './Components/LoadingScreen';
 
@@ -31,6 +33,9 @@ function App() {
         <Route path='/works' element={<Works />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contacts />} />
+
+        <Route path="/1234567890" element={<SecretPage />} />
+        <Route path="*" element={<NotFound404 />} />
       </Routes>
       <FooterCom />
     </Router>

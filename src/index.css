@@ -1,9 +1,35 @@
 * {
-  background-color: #1B2021;
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #1ae0f4;
+}
+
+:root {
+  --bg-color: #1b2021;
+  --text-color: #1ae0f4;
+}
+
+.light-theme {
+  --bg-color: #F7F2FF;
+  --text-color: #1ae0f4;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+p,
+a,
+div,
+nav {
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }

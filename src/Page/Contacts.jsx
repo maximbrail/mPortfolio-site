@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../Components/styleCom.css'
 
 export const Contacts = () => {
   const [name, setName] = useState("");
@@ -9,6 +10,16 @@ export const Contacts = () => {
   const CHAT_ID = "-4673911276";
 
   const handleSubmit = async () => {
+    if (!name.trim() || !age.trim() || !comment.trim()) {
+      alert("Please fill in all fields before submitting.");
+      return;
+    }
+
+    if (!/^\d+$/.test(age)) {
+      alert("Age must contain only numbers.");
+      return;
+    }
+
     const message = `New message from mPortfolio:\n\nName: ${name}\nAge: ${age}\nComment: ${comment}`;
 
     try {
@@ -28,23 +39,30 @@ export const Contacts = () => {
       );
 
       if (response.ok) {
-        alert("Сообщение отправлено в Telegram!");
+        alert("Message sent to Telegram!");
         setName("");
         setAge("");
         setComment("");
       } else {
-        alert("Ошибка при отправке в Telegram.");
-        console.error("Ошибка:", await response.text());
+        alert("Error sending message.");
+        console.error("Error:", await response.text());
       }
     } catch (error) {
-      alert("Ошибка сети при отправке.");
-      console.error("Ошибка:", error);
+      alert("Network error while sending message.");
+      console.error("Error:", error);
+    }
+  };
+
+  const handleAgeChange = (e) => {
+    const value = e.target.value;
+    if (/^\d*$/.test(value)) {
+      setAge(value);
     }
   };
 
   return (
     <div className="contacts-div">
-      <h1 className="contacts-title">Contact</h1>
+      <h1 className="contacts-title">Contact me or send feedback</h1>
       <input
         className="contact-input"
         type="text"
@@ -54,10 +72,10 @@ export const Contacts = () => {
       />
       <input
         className="contact-input"
-        type="number"
+        type="text"
         placeholder="Type your age..."
         value={age}
-        onChange={(e) => setAge(e.target.value)}
+        onChange={handleAgeChange}
       />
       <input
         className="contact-input"
