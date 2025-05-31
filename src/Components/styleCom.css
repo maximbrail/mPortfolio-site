@@ -125,11 +125,11 @@
 
 .header {
   padding: 30px;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 .header2 {
-  margin: 150px 0;
+  margin: 26.5px 0;
 
   .header-title {
     text-align: center;
@@ -172,7 +172,6 @@
   text-align: center;
   align-items: center;
   padding: 0.5rem 1rem;
-  margin-top: 50px;
   position: relative;
   height: 50px;
   border-bottom: 2px solid #1ae0f4;
@@ -190,7 +189,7 @@
 }
 
 .header-title {
-  font-size: clamp(14px, 2vw, 1.25rem);
+  font-size: clamp(11.5px, 2vw, 1.25rem);
   margin-bottom: 0.5rem;
   white-space: pre-wrap;
   font-family: monospace;
@@ -213,43 +212,50 @@
 
 .window-controls {
   display: flex;
-  align-items: center;
-  margin-right: 30px;
-  gap: 0.7rem;
+  gap: 10px;
 
   h2 {
     cursor: pointer;
   }
 }
 
-.window-btn {
+/* .window-btn {
   font-size: 1.3rem;
   color: #1ae0f4;
   cursor: pointer;
   user-select: none;
   font-weight: bold;
-}
+} */
 
 .window-btn {
-  font-size: 1.3rem;
+  padding: 5px;
+  width: 21px;
+  height: 21px;
+  border-radius: 8px;
+  background-color: transparent;
   color: #1ae0f4;
-  cursor: pointer;
-  user-select: none;
   font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.window-btn:hover {
+  background-color: #1ed8ec;
+  color: #1B2021;
+  transform: scale(1.1);
+  box-shadow: 0 0 8px #1ae0f4;
 }
 
 .skills-progress {
   padding: 40px 20px;
   max-width: 800px;
   margin: 0 auto;
-
 }
 
 .progress-item {
   margin-bottom: 20px;
-  font-family: monospace;
-  color: #1ae0f4;
-
   p {
     margin-bottom: 10px;
   }
@@ -260,7 +266,6 @@
   border: 2px solid #1ae0f4;
   border-radius: 8px;
   height: 20px;
-  overflow: hidden;
 }
 
 .progress-fill {
@@ -271,16 +276,16 @@
 }
 
 .progress-fill.html {
-  width: 95%;
+  width: 85%;
 }
 .progress-fill.css {
-  width: 90%;
+  width: 82.5%;
 }
 .progress-fill.js {
-  width: 75%;
+  width: 77.5%;
 }
 .progress-fill.react {
-  width: 80%;
+  width: 85%;
 }
 
 @media (max-width: 600px) {
@@ -348,7 +353,7 @@
 .main2 {
   width: 100%;
   max-width: 600px;
-  margin: 20px 0;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -440,21 +445,24 @@
   margin: 25px 0;
 }
 
-.slider-img {
+.mySwiper {
   width: 100%;
-  max-width: 250px;
+  max-width: 600px;
   height: auto;
-  border: 2px solid #1ae0f4;
   border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 4px 10px rgba(26, 224, 244, 0.2);
-  transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
-.slider-img:hover {
-  transform: scale(1.02);
+.slider-img {
+  width: 250px;
+  min-height: 250px;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
+
 
 /* footer */
 
@@ -472,17 +480,15 @@
 .footer-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  max-width: 800px;
   margin: 0 auto;
   flex-wrap: wrap;
   max-width: 1200px;
-  gap: 60px;
+  gap: 65px;
 }
 
 .footer-section {
-  min-width: 250px;
   text-align: left;
+
   @media (max-width: 600px) {
     text-align: center;
   }
@@ -549,6 +555,10 @@
   }
 }
 
+.rights{
+  width: 17.5px;
+}
+
 /* contacts */
 
 .contacts-div {
@@ -556,8 +566,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
-  margin: 185px 0;
+  gap: 28.5px;
+  margin: 175px 0;
 }
 
 .contact-input {
@@ -570,7 +580,7 @@
 }
 
 .contact-input:nth-child(4) {
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .contacts-title {

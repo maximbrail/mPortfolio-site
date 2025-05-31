@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 import "./styleCom.css";
 import Contacts from "../Page/Contacts";
 import slide1 from "../Assets/slider1.png";
@@ -45,32 +50,56 @@ export const MainCom = () => {
 
   return (
     <div className="main-obsh">
-        {/* SKILLS LINE */}
+      {/* SKILLS LINE */}
 
-        <div className="skills-progress">
+      <div className="skills-progress">
         <h1 className="main-title">My Skill Progress</h1>
         <div className="progress-item">
           <p>HTML</p>
-          <div className="progress-bar"><div className="progress-fill html"></div></div>
+          <div className="progress-bar">
+            <div className="progress-fill html"></div>
+          </div>
         </div>
         <div className="progress-item">
           <p>CSS</p>
-          <div className="progress-bar"><div className="progress-fill css"></div></div>
+          <div className="progress-bar">
+            <div className="progress-fill css"></div>
+          </div>
         </div>
         <div className="progress-item">
           <p>JavaScript</p>
-          <div className="progress-bar"><div className="progress-fill js"></div></div>
+          <div className="progress-bar">
+            <div className="progress-fill js"></div>
+          </div>
         </div>
         <div className="progress-item">
           <p>React.js</p>
-          <div className="progress-bar"><div className="progress-fill react"></div></div>
+          <div className="progress-bar">
+            <div className="progress-fill react"></div>
+          </div>
         </div>
       </div>
-      {/* SLIDER */}
+      {/* SWIPER */}
 
       <div className="slider">
         <h1 className="main-title">Memes Slider</h1>
-        <img src={slides[currentSlide]} alt="slider" className="slider-img" />
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
+          pagination={{ clickable: true }}
+          className="mySwiper"
+        >
+          {slides.map((img, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={img}
+                alt={`Slide ${index + 1}`}
+                className="slider-img"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       {/* SKILLS */}

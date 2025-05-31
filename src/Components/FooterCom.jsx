@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import rights from '../Assets/rights.png'
 
 export const FooterCom = () => {
   return (
@@ -23,7 +24,7 @@ export const FooterCom = () => {
       </div>
       
       <hr className="footer-divider" />
-      <p className="footer-text">&copy; 2025 mPortfolio. All rights reserved. Probably.</p>
+      <p className="footer-text">&copy; 2025 mPortfolio. All rights reserved. <img src={rights} alt="All rights Reserved. Probably." className='rights'/> Probably.</p>
     </footer>
   );
 

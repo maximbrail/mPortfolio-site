@@ -39,3 +39,10 @@
     transform: rotate(360deg);
   }
 }
+
+.time{
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+  color: #1ae0f4;
+}

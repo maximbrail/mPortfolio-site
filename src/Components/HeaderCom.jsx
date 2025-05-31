@@ -7,10 +7,10 @@ import Prj4 from "../Assets/project4.png";
 
 export const HeaderCom = () => {
   const texts = [
-    "Hello! I'm Max, a 15-year-old front-end development student from Tashkent, Uzbekistan. I'm currently studying at School №145 and also attending programming courses at IT Park, where I'm learning modern web technologies and improving my coding skills.",
-    "I'm passionate about building beautiful, responsive, and user-friendly websites using HTML, CSS, and JavaScript. In my free time, I love experimenting with different layouts, exploring design ideas, and creating projects to practice what I’ve learned.",
-    "I’m always eager to learn something new and grow as a developer. In the future, I hope to become a professional front-end engineer and work on real-world projects that help people and make a difference.",
-    "Right now, I’m focusing on mastering JavaScript, learning how to work with APIs, and exploring frameworks like React."
+    "Hi! I'm Max, a 15-year-old front-end student from Tashkent, Uzbekistan. I study at School №145 and take programming courses at IT Park, learning web tech and coding skills.",
+    "I love building clean, responsive, and user-friendly websites using HTML, CSS, and JavaScript. In my free time, I explore layouts, design ideas, and build projects to improve.",
+    "I'm always curious and motivated to grow as a developer. One day, I hope to become a pro front-end engineer and work on real projects that help people.",
+    "Right now, I'm focused on mastering JavaScript, working with APIs, and learning frameworks like React.",
   ];
 
   const [currentText, setCurrentText] = useState("");
@@ -40,15 +40,17 @@ export const HeaderCom = () => {
       <div className="header3">
         <h1 className="header-title2">Notepad</h1>
         <div className="window-controls">
-          <div className="window-btn">-</div>
-          <div className="window-btn">+</div>
-          <div className="window-btn">×</div>
+          <div className="window-btn minimize" title="Minimize">_</div>
+          <div className="window-btn maximize" title="Maximize">▢</div>
+          <div className="window-btn close" title="Close">×</div>
         </div>
       </div>
 
       <div className="header">
         {allShownTexts.map((text, i) => (
-          <h1 key={i} className="header-title">{text}</h1>
+          <h1 key={i} className="header-title">
+            {text}
+          </h1>
         ))}
 
         {textIndex < texts.length && (
@@ -64,19 +66,39 @@ export const HeaderCom = () => {
           Yes, I am not the author of these sites, but I made them.
         </h2>
         <div className="cards">
-          <a href="https://maximbrail.github.io/hotel-site/" target="_blank" rel="noopener noreferrer" className="card">
+          <a
+            href="https://maximbrail.github.io/hotel-site/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card"
+          >
             <img src={Prj1} alt="" className="card-img" />
             <p className="card-title">Luxury Hotels Project</p>
           </a>
-          <a href="https://maximbrail.github.io/shibuya-site-not-full/" target="_blank" rel="noopener noreferrer" className="card">
+          <a
+            href="https://maximbrail.github.io/shibuya-site-not-full/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card"
+          >
             <img src={Prj2} alt="" className="card-img" />
             <p className="card-title">Shibuya Project</p>
           </a>
-          <a href="https://maximbrail.github.io/cat-energy-full/" target="_blank" rel="noopener noreferrer" className="card">
+          <a
+            href="https://maximbrail.github.io/cat-energy-full/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card"
+          >
             <img src={Prj3} alt="" className="card-img" />
             <p className="card-title">Cat Energy Project</p>
           </a>
-          <a href="https://maximbrail.github.io/final-ice-cream-updated/" target="_blank" rel="noopener noreferrer" className="card">
+          <a
+            href="https://maximbrail.github.io/final-ice-cream-updated/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card"
+          >
             <img src={Prj4} alt="" className="card-img" />
             <p className="card-title">Polar Ice Cream Project</p>
           </a>

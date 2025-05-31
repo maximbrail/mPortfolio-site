@@ -32,7 +32,7 @@ export const NavCom = () => {
         <Link to='/about' onClick={() => setMenuOpen(false)}>About</Link>
         <Link to='/contact' onClick={() => setMenuOpen(false)}>Contact</Link>
         <span className='nav-link-fake' onClick={() => { setLightTheme(!lightTheme); setMenuOpen(false); }}>
-          {lightTheme ? 'Change Theme' : 'Change Theme'}
+          {lightTheme ? '◐ Change Theme' : '◑ Change Theme'}
         </span>
       </div>
 

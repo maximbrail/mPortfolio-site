@@ -5,8 +5,8 @@ export const LoadingScreen = () => {
   return (
     <div className="loading-screen">
       <div className="spinner"></div>
-      <div className="loading-text">Please wait...</div>
-    </div>
+      <div className="loading-text">🕓 Please wait...</div>
+      </div>
   );
 };
 
