@@ -38,11 +38,11 @@
 @keyframes glitch-simple {
   0% {
     transform: translate(0, 0);
-    color: #fff;
+    color: var(--text-color);
   }
   15% {
     transform: translate(-2px, 1px);
-    color: #1ae0f4;
+    color: #1af45b;
   }
   30% {
     transform: translate(2px, -2px);
@@ -54,15 +54,15 @@
   }
   60% {
     transform: translate(2px, 1px);
-    color: #fff;
+    color: var(--text-color);
   }
   75% {
     transform: translate(-1px, -1px);
-    color: #1ae0f4;
+    color: #6f00ff;
   }
   100% {
     transform: translate(0, 0);
-    color: #fff;
+    color: var(--text-color);
   }
 }
 
