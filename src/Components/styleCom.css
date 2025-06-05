@@ -532,8 +532,9 @@
 
 .footer-section p,
 .footer-section li,
+.footer-section a,
 .footer-text {
-  font-size: clamp(12px, 2.2vw, 18px);
+  font-size: clamp(15px, 2.2vw, 18px);
   margin: 5px 0;
 }
 
@@ -557,6 +558,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.rights{
+  font-size: 13.5px;
 }
 
 /* contacts */

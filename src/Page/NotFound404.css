@@ -10,11 +10,11 @@
 
 .notfound-box {
   text-align: center;
-  border: 2px solid #1ae0f4;
+  border: 2px solid var(--text-color);
   border-radius: 12px;
-  padding: 40px 30px;
+  padding: 15px;
   max-width: 400px;
-  color: #1ae0f4;
+  color: var(--text-color);
   user-select: none;
 }
 
@@ -27,6 +27,7 @@
 .notfound-box h1 {
   margin: 0 0 15px;
   font-weight: 700;
+  text-align: center;
 }
 
 .notfound-box p {
@@ -38,9 +39,9 @@
 .notfound-link {
   display: inline-block;
   padding: 10px 25px;
-  border: 2px solid #1ae0f4;
+  border: 2px solid var(--text-color);
   border-radius: 8px;
-  color: #1ae0f4;
+  color: var(--text-color);
   background-color: transparent;
   text-decoration: none;
   font-weight: 600;
