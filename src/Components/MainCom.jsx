@@ -5,7 +5,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import "./styleCom.css";
-import Contacts from "../Page/Contacts";
+import Contacts from "../Page/Contacts.jsx"
+
 import slide1 from "../Assets/slider1.png";
 import slide2 from "../Assets/slider2.jpg";
 import slide3 from "../Assets/slider3.jpg";
@@ -79,6 +80,8 @@ export const MainCom = () => {
           </div>
         </div>
       </div>
+
+
       {/* SWIPER */}
 
       <div className="slider">
@@ -104,7 +107,7 @@ export const MainCom = () => {
 
       {/* SKILLS */}
       <div className="main">
-        <h1 className="main-title">Skills</h1>
+        <h1 className="main-title">My Programming skills</h1>
         <div className="main-btns">
           {["HTML", "CSS", "JS", "React.js"].map((skill) => (
             <button
@@ -169,8 +172,8 @@ export const MainCom = () => {
       </div>
 
       {/* ABOUT */}
-      <div className="main">
-        <h1 className="main-title">About</h1>
+      <div className="main about">
+        <h1 className="main-title">About me and my hobbies</h1>
         <div className="main-btns">
           {["Voleyball", "Movies", "Music", "Games"].map((item) => (
             <button
@@ -221,11 +224,9 @@ export const MainCom = () => {
               </p>
             )}
           </div>
+
         )}
       </div>
-
-      {/* CONTACT */}
-      <Contacts />
     </div>
   );
 };

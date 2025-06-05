@@ -1,0 +1,96 @@
+.glitch-container {
+  background: transparent;
+  color: #fff;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.glitch-text {
+  font-size: 3rem;
+  font-family: "Courier New", monospace;
+  position: relative;
+  animation: glitch-simple 1.8s infinite;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  margin: 60px 0;
+}
+
+.glitch-subtitle {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.glitch-button{
+    text-decoration: none;
+
+}
+
+@keyframes glitch-simple {
+  0% {
+    transform: translate(0, 0);
+    color: #fff;
+  }
+  15% {
+    transform: translate(-2px, 1px);
+    color: #1ae0f4;
+  }
+  30% {
+    transform: translate(2px, -2px);
+    color: #00d31c;
+  }
+  45% {
+    transform: translate(-1px, 2px);
+    color: #ff0000;
+  }
+  60% {
+    transform: translate(2px, 1px);
+    color: #fff;
+  }
+  75% {
+    transform: translate(-1px, -1px);
+    color: #1ae0f4;
+  }
+  100% {
+    transform: translate(0, 0);
+    color: #fff;
+  }
+}
+
+@media (max-width: 1024px) {
+  .glitch-text {
+    font-size: 2.5rem;
+  }
+  .glitch-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .glitch-text {
+    font-size: 2rem;
+  }
+  .glitch-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .glitch-text {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  .glitch-subtitle {
+    font-size: 0.9rem;
+  }
+}

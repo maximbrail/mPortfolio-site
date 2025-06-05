@@ -11,7 +11,7 @@
   align-items: center;
   gap: 20px;
   z-index: 9999;
-  font-family: monospace, monospace;
+  font-family: monospace;
   color: #1ae0f4;
   user-select: none;
 }
@@ -27,9 +27,13 @@
 }
 
 .loading-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.2rem;
   color: #1ae0f4;
 }
+
 
 @keyframes spin {
   0% {
@@ -38,11 +42,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-.time{
-  width: 20px;
-  height: 20px;
-  margin-right: 7px;
-  color: #1ae0f4;
 }

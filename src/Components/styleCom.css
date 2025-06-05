@@ -47,7 +47,7 @@
 }
 
 .nav-links a {
-  color: #1ae0f4;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -76,7 +76,7 @@
 .burger .bar {
   width: 25px;
   height: 3px;
-  background-color: #1ae0f4;
+  background-color: var(--text-color);
   transition: all 0.4s ease;
 }
 
@@ -138,11 +138,10 @@
 
 .header-obsh {
   padding: 2rem;
-  color: #1ae0f4;
 }
 
 .animated-text-container {
-  width: 90vw;
+  width: 90%;
   max-width: 600px;
   height: 3.5em;
   overflow: hidden;
@@ -156,10 +155,10 @@
 
 .animated-text {
   font-family: monospace;
-  border-right: 2px solid #1ae0f4;
+  border-right: 2px solid var(--text-color);
   white-space: pre-wrap;
   display: inline;
-  color: #1ae0f4;
+  color: var(--text-color);
 }
 
 .cursor-blink {
@@ -174,12 +173,12 @@
   padding: 0.5rem 1rem;
   position: relative;
   height: 50px;
-  border-bottom: 2px solid #1ae0f4;
+  border-bottom: 2px solid var(--text-color);
 }
 
 .header-title2 {
   font-size: clamp(1.2rem, 2vw, 2rem);
-  color: #1ae0f4;
+  color: var(--text-color);
   margin: 0;
 
   .header {
@@ -219,33 +218,24 @@
   }
 }
 
-/* .window-btn {
-  font-size: 1.3rem;
-  color: #1ae0f4;
-  cursor: pointer;
-  user-select: none;
-  font-weight: bold;
-} */
-
 .window-btn {
-  padding: 5px;
+  padding: 7px;
   width: 21px;
   height: 21px;
   border-radius: 8px;
   background-color: transparent;
-  color: #1ae0f4;
+  color: var(--text-color);
   font-weight: bold;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
   transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+  margin: 0 5px;
 }
 
 .window-btn:hover {
-  background-color: #1ed8ec;
   color: #1B2021;
   transform: scale(1.1);
-  box-shadow: 0 0 8px #1ae0f4;
 }
 
 .skills-progress {
@@ -263,14 +253,14 @@
 
 .progress-bar {
   background-color: transparent;
-  border: 2px solid #1ae0f4;
+  border: 2px solid var(--text-color);
   border-radius: 8px;
   height: 20px;
 }
 
 .progress-fill {
   height: 100%;
-  background-color: #1ae0f4;
+  background-color: var(--text-color);
   border-radius: 6px;
   transition: width 0.5s ease-in-out;
 }
@@ -314,7 +304,7 @@
 
 .card {
   background-color: transparent;
-  border: 1px solid #1ae0f4;
+  border: 1px solid var(--text-color);
   padding: 1rem;
   text-align: center;
   cursor: pointer;
@@ -337,7 +327,7 @@
 
 .card-title {
   font-size: clamp(0.9rem, 2vw, 1.2rem);
-  color: #1ae0f4;
+  color: var(--text-color);
 }
 
 /* main */
@@ -394,9 +384,9 @@
   position: relative;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  color: #1ae0f4;
+  color: var(--text-color);
   background-color: transparent;
-  border: 2px solid #1ae0f4;
+  border: 2px solid var(--text-color);
   border-radius: 6px;
   cursor: pointer;
   overflow: hidden;
@@ -404,7 +394,7 @@
 
   --mouse-x: 50%;
   --mouse-y: 50%;
-  --spotlight-color: rgba(26, 224, 244, 0.1);
+  --spotlight-color: rgba(110, 43, 219, 0.425);
 }
 
 .main-btn::before {
@@ -454,22 +444,30 @@
 }
 
 .slider-img {
-  width: 250px;
-  min-height: 250px;
-  margin: 0 auto;
-  border-radius: 10px;
+  width: 90%;
   height: auto;
   object-fit: cover;
   display: block;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
+.slider{
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about{
+  margin: 75px 0;
+}
 
 /* footer */
 
 .footer {
   background-color: transparent;
   text-align: center;
-  border-top: 2px solid #1ae0f4;
+  border-top: 2px solid var(--text-color);
   padding: 30px 20px;
 
   a {
@@ -528,14 +526,14 @@
 
 .footer-divider {
   border: none;
-  border-top: 1px solid #1ae0f4;
+  border-top: 1px solid var(--text-color);
   margin: 30px 0 15px;
 }
 
 .footer-section p,
 .footer-section li,
 .footer-text {
-  font-size: clamp(14px, 2.2vw, 18px);
+  font-size: clamp(12px, 2.2vw, 18px);
   margin: 5px 0;
 }
 
@@ -555,8 +553,10 @@
   }
 }
 
-.rights{
-  width: 17.5px;
+.footer-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* contacts */
@@ -572,7 +572,8 @@
 
 .contact-input {
   background-color: transparent;
-  border: 2px solid #1ae0f4;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
   border-radius: 5px;
   font-size: clamp(15px, 2.5vw, 20px);
   padding: 5px 15px;
@@ -590,7 +591,8 @@
 .contact-btn {
   background-color: transparent;
   display: flex;
-  border: 2px solid #1ae0f4;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
   border-radius: 5px;
   font-size: clamp(18px, 2.5vw, 22px);
   display: flex;

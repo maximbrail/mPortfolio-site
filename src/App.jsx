@@ -10,8 +10,10 @@ import { About } from './Page/About';
 import { Contacts } from './Page/Contacts';
 import NotFound404 from "./Page/NotFound404";
 import SecretPage from './Page/SecretPage';
+import GlitchPage from './Page/GlitchPage';
 
 import LoadingScreen from './Components/LoadingScreen';
+import ScrollToTopButton from './Components/ScrollToTopButton';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -28,6 +30,7 @@ function App() {
   return (
     <Router className="App">
       <NavCom />
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/works' element={<Works />} />
@@ -36,8 +39,13 @@ function App() {
 
         <Route path="/1234567890" element={<SecretPage />} />
         <Route path="*" element={<NotFound404 />} />
+        <Route path="/glitch" element={<GlitchPage />} />
       </Routes>
-      <FooterCom />
+
+      <FooterCom/>
+
+
+      <ScrollToTopButton/>
     </Router>
   );
 }
