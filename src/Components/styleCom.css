@@ -31,7 +31,6 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 50px;
   margin-right: 30px;
   gap: 1rem;
   transition: all 0.3s;
@@ -49,6 +48,15 @@
 .nav-links a {
   color: var(--text-color);
   text-decoration: none;
+    display: inline-flex;      
+  align-items: center; 
+  gap: 3px;                 
+  text-decoration: none;
+}
+
+.nav-user-icon {
+  width: 16px;
+  margin-right: 4.5px;
 }
 
 .nav-links a,
@@ -203,7 +211,6 @@
 }
 
 .header-title3 {
-  margin-bottom: 55px;
   font-size: clamp(14px, 2vw, 1.25rem);
   margin-bottom: 0.5rem;
   text-align: center;
@@ -234,7 +241,7 @@
 }
 
 .window-btn:hover {
-  color: #1B2021;
+  color: #1b2021;
   transform: scale(1.1);
 }
 
@@ -363,7 +370,6 @@
   background-color: transparent;
   font-size: 16px;
   font-weight: bold;
-  text-align: left;
   text-align: center;
   transition: 0.3s all;
   opacity: 0;
@@ -452,13 +458,13 @@
   margin: 0 auto;
 }
 
-.slider{
+.slider {
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
 }
 
-.about{
+.about {
   margin: 75px 0;
 }
 
@@ -554,13 +560,13 @@
   }
 }
 
-.footer-text{
+.footer-text {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.rights{
+.rights {
   font-size: 13.5px;
 }
 
@@ -600,7 +606,6 @@
   color: var(--text-color);
   border-radius: 5px;
   font-size: clamp(18px, 2.5vw, 22px);
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px 55px;

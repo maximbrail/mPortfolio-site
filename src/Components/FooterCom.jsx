@@ -23,7 +23,7 @@ export const FooterCom = () => {
       </div>
       
       <hr className="footer-divider" />
-      <p className="footer-text rights">&copy; 2025 mPortfolio. All rights reserved. Probably.</p>
+      <p className="footer-text rights" >&copy; 2025 mPortfolio. All rights reserved. Probably.</p>
     </footer>
   );
 
