@@ -8,7 +8,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const isAuth = localStorage.getItem("isAuthenticated");
+    const isAuth = localStorage.getItem("isLoggedIn");
     const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
     if (isAuth !== "true" || !currentUser) {

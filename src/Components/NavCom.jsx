@@ -13,7 +13,7 @@ import openDark from '../Assets/open-dark.svg';
 export const NavCom = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [lightTheme, setLightTheme] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+    const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === 'true');
 
     useEffect(() => {
         const root = document.documentElement;
@@ -21,13 +21,14 @@ export const NavCom = () => {
     }, [lightTheme]);
 
     useEffect(() => {
-        const handleStorageChange = () => {
-            setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
-        };
+    const handleStorageChange = () => {
+        setIsLoggedIn(localStorage.getItem("isLoggedIn") === 'true');
+    };
 
-        window.addEventListener('storage', handleStorageChange);
-        return () => window.removeEventListener('storage', handleStorageChange);
-    }, []);
+    window.addEventListener('storage', handleStorageChange);
+    return () => window.removeEventListener('storage', handleStorageChange);
+}, []);
+
 
 
     return (
