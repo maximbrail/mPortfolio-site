@@ -4,7 +4,6 @@ import '../index.css';
 import { Link } from 'react-router-dom';
 import Logo from '../Assets/logo.png';
 
-
 import userLight from '../Assets/user.svg';
 import userDark from '../Assets/user-dark.svg';
 import openLight from '../Assets/open.svg';
@@ -14,6 +13,7 @@ export const NavCom = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [lightTheme, setLightTheme] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("isLoggedIn") === 'true');
+    const [isFixed, setIsFixed] = useState(false);
 
     useEffect(() => {
         const root = document.documentElement;
@@ -21,25 +21,34 @@ export const NavCom = () => {
     }, [lightTheme]);
 
     useEffect(() => {
-    const handleStorageChange = () => {
-        setIsLoggedIn(localStorage.getItem("isLoggedIn") === 'true');
-    };
+        const handleStorageChange = () => {
+            setIsLoggedIn(localStorage.getItem("isLoggedIn") === 'true');
+        };
 
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
-}, []);
+        window.addEventListener('storage', handleStorageChange);
+        return () => window.removeEventListener('storage', handleStorageChange);
+    }, []);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsFixed(window.scrollY > 100);
+        };
 
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
-        <div className='nav'>
+        <div className={`nav ${isFixed ? 'fixed' : ''}`} style={{
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    zIndex: 9999,
+  }}>
             <div className='nav-logo'>
                 <Link to='/' className='nav-logo-title'>
-                    <img 
-                      className='nav-logo-img' 
-                      src={Logo} 
-                      alt='msite' 
-                    />
+                    <img className='nav-logo-img' src={Logo} alt='msite' />
                     mPortfolio
                 </Link>
             </div>
@@ -58,15 +67,15 @@ export const NavCom = () => {
                 </span>
 
                 {isLoggedIn ? (
-                    <>
-                        <Link to='/dashboard' onClick={() => setMenuOpen(false)}>
-                       <img src={ lightTheme ? userDark : userLight } alt='user' className='nav-user-icon' />
-                        Profile</Link>
-                    </>
+                    <Link to='/dashboard' onClick={() => setMenuOpen(false)}>
+                        <img src={lightTheme ? userDark : userLight} alt='user' className='nav-user-icon' />
+                        Profile
+                    </Link>
                 ) : (
                     <Link to='/login' onClick={() => setMenuOpen(false)}>
-                        <img src={ lightTheme ? openDark : openLight } alt='login' className='nav-user-icon' />
-                        Login</Link>
+                        <img src={lightTheme ? openDark : openLight} alt='login' className='nav-user-icon' />
+                        Login
+                    </Link>
                 )}
             </div>
 

@@ -13,7 +13,7 @@ const Register = () => {
 
     const existingUser = users.find((u) => u.email === email);
     if (existingUser) {
-      alert("Пользователь уже существует");
+      alert("The user already exists");
       return;
     }
 

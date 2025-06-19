@@ -17,7 +17,6 @@
     z-index: 999;
     transition: opacity 0.3s ease, transform 0.3s ease;
     margin: 2px;
-    padding-bottom: 10px;
     padding-bottom: 5.5px;
 }
 

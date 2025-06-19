@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import "./styleCom.css";
-import Contacts from "../Page/Contacts.jsx"
 
 import slide1 from "../Assets/slider1.png";
 import slide2 from "../Assets/slider2.jpg";
@@ -175,7 +174,7 @@ export const MainCom = () => {
       <div className="main about">
         <h1 className="main-title">About me and my hobbies</h1>
         <div className="main-btns">
-          {["Voleyball", "Movies", "Music", "Games"].map((item) => (
+          {["Volleyball", "Movies", "Music", "Games"].map((item) => (
             <button
               className="main-btn"
               key={item}
@@ -188,7 +187,7 @@ export const MainCom = () => {
         </div>
         {activeAbout && (
           <div className="info-box">
-            {activeAbout === "Voleyball" && (
+            {activeAbout === "Volleyball" && (
               <p>
                 I like to play volleyball because it is a fun and active sport.
                 I usually play volleyball at school before lessons or during

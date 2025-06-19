@@ -5,7 +5,7 @@ const ScrollToTopButton = () => {
     const [visible, setVisible] = useState(false);
 
     const handleScroll = () => {
-        setVisible(window.scrollY > 600);
+        setVisible(window.scrollY > 500);
     };
 
     const scrollToTop = () => {
